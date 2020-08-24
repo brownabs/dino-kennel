@@ -25,14 +25,13 @@ const dinosaurs = [
     owner: 'Abbey Brown',
     isHealthy: false,
     isDead: true 
-  }]
+  }];
+
+  const healthyDinos = dinosaurs.filter(d => d ? d.isHealthy === true : false);
+
+  const sickDinos = dinosaurs.filter(d => d ? d.isHealthy === false : true);
+
+  const deadDinos = dinosaurs.filter(d => d ? d.isDead === true : false);
 
 
-const healthyDinos = () => {dinosaurs.filter((d) => d.isHealthy === true)};
-console.log(healthyDinos())
-
-const sickDinos = () => {dinosaurs.filter((d) => d.isHealthy === false)};
-
-const deadDinos = () => {dinosaurs.filter((d) => d.isDead === true)};
-
-export default {healthyDinos}
+export default { healthyDinos, sickDinos, deadDinos }
