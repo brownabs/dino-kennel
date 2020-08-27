@@ -5,7 +5,7 @@ const dinosaurs = [
     age: 15,
     type: 'T-Rex',
     owner: 'Abbey Brown',
-    isHealthy: true,
+    health: 25,
     isDead: false 
   },
   { 
@@ -14,7 +14,7 @@ const dinosaurs = [
     age: 15,
     type: 'T-Rex',
     owner: 'Abbey Brown',
-    isHealthy: false,
+    health: 75,
     isDead: false 
   },
   { 
@@ -23,15 +23,15 @@ const dinosaurs = [
     age: 15,
     type: 'T-Rex',
     owner: 'Abbey Brown',
-    isHealthy: false,
+    health: 100,
     isDead: true 
   }];
 
-  const healthyDinos = dinosaurs.filter(d => d ? d.isHealthy === true : false);
+  const healthyDinos = dinosaurs.filter(d => d ? d.health > 75 : false);
 
-  const sickDinos = dinosaurs.filter(d => d ? d.isHealthy === false : true);
+  const sickDinos = dinosaurs.filter(d => d ? d.health <= 75 && d.health > 25 : true);
 
-  const deadDinos = dinosaurs.filter(d => d ? d.isDead === true : false);
+  const deadDinos = dinosaurs.filter(d => d ? d.health <= 25 : false);
 
 
-export default { healthyDinos, sickDinos, deadDinos }
+export default { healthyDinos, sickDinos, deadDinos}

@@ -1,9 +1,33 @@
-#kennel {
-  background: lightblue
+#healthy {
+  background-color: lightblue
 }
 #hospital {
-  background: rgb(141, 41, 41)
+  background-color: rgb(141, 41, 41)
 }
 #graveyard {
-  background: rgb(44, 37, 37)
+  background-color: rgb(44, 37, 37)
+}
+
+html, body {
+  overflow: auto;
+  font-family: 'Londrina Solid', cursive;
+  font-size: 20px
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  font-size: 50px;
+  font-family: 'Londrina Solid', cursive;
+}
+
+#healthy, #hospital, #graveyard {
+  padding: 20px;
+  margin: auto;
+  width : 90%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap
 }
