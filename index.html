@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dino Kennel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/89776cb07c.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="/styles/main.css" />
 </head>
@@ -12,27 +14,23 @@
     <a class="navbar-brand">
       Dino Kennel
     </a>
-    <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link">Kennel</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link">Hospital</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link">Graveyard</a>
+          <a class="nav-link" id="add-dino">Home</a>
         </li>
       </ul>
-    </div>
   </nav>
-<div class="container" id="dino-kennel">
-  <div id="kennel"></div>
-  <div id="hospital"></div>
-  <div id="graveyard"></div>
+  <div id="add-dino"></div>
+<div class="container-fluid h-100% d-flex flex-column" id="kennel">
+  <h3>Kennel</h3>
+  <div id="healthy">
+  </div>
+  <h3>Hospital</h3>
+  <div id="hospital">
+  </div>
+  <h3>Graveyard</h3>
+  <div id="graveyard">
+  </div>
 </div>
 <script
 src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
