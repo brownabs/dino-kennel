@@ -6,7 +6,8 @@ const dinosaurs = [
     type: 'T-Rex',
     owner: 'Abbey Brown',
     health: 25,
-    isDead: false 
+    isDead: false, 
+    adventures: []
   },
   { 
     name: 'Peter', 
@@ -15,7 +16,9 @@ const dinosaurs = [
     type: 'T-Rex',
     owner: 'Abbey Brown',
     health: 75,
-    isDead: false 
+    isDead: false,
+    adventures: []
+
   },
   { 
     name: 'Harold', 
@@ -24,7 +27,8 @@ const dinosaurs = [
     type: 'T-Rex',
     owner: 'Abbey Brown',
     health: 0,
-    isDead: true 
+    isDead: true,
+    adventures: []
   }];
 
   const adventures = [
@@ -34,27 +38,27 @@ const dinosaurs = [
     },
     { id: 'adventure2',
     title: 'Hiking',
-    healthHit: 15
+    healthDeduction: 15
   },
   { id: 'adventure3',
   title: 'Running',
-  healthHit: 30
+  healthDeduction: 30
   },
   { id: 'adventure4',
   title: 'Playing',
-  healthHit: 20
+  healthDeduction: 20
   },
   { id: 'adventure5',
   title: 'Getting lost',
-  healthHit: 50
+  healthDeduction: 50
   },
   { id: 'adventure6',
   title: 'Singing',
-  healthHit: 10
+  healthDeduction: 10
   },
   { id: 'adventure7',
   title: 'Swimming',
-  healthHit: 50
+  healthDeduction: 50
   },
   ];
 

@@ -1,4 +1,6 @@
 import { printDinosaurs } from "../helpers/utils.js";
+import { dinoAdventure } from './dinoAdventure.js'
+import { dinoDetails } from "./dinoDetails.js";
 
 const feedDinosaur = (index, item, array) => {
   $(`#feed-${index}`).click(() => {
@@ -29,10 +31,17 @@ const deleteDinosaur = (index, array) => {
   });
 };
 
-const takeOnAdventure = (array, index) => {
+const detailsForDinosaur = (index, item) => {
+  $(`#details-${index}`).click(() => {
+      dinoDetails(index, item);
+  });
+}
+
+const takeAnAdventure = (index, item, array) => {
   $(`#adventure-${index}`).click(() => {
-    printDinosaurs(array);
+    dinoAdventure(index, item, array)
   });
 };
 
-export default { feedDinosaur, petDinosaur, deleteDinosaur, takeOnAdventure };
+
+export default { feedDinosaur, petDinosaur, deleteDinosaur, takeAnAdventure, detailsForDinosaur };
