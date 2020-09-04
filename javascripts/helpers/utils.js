@@ -17,7 +17,8 @@ const printDinosaurs = (array) => {
         }
         dinoActions.feedDinosaur(index, item, array);
         dinoActions.petDinosaur(index, item, array);
-        // dinoActions.details(item, index);
+        dinoActions.takeAnAdventure(index, item, array);
+        dinoActions.detailsForDinosaur(index, item);
         dinoActions.deleteDinosaur(index, array);     
     });
 };

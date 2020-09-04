@@ -1,3 +1,5 @@
+import { dinoDetails } from './dinoDetails.js';
+
 const dinoCard = (item, index) => {
   let domString = 
       `<div class="card m-1" style="width: 25rem;">
@@ -12,7 +14,7 @@ const dinoCard = (item, index) => {
         <button type="button" class="btn btn-warning mt-1 m-1 p-3" style="width:7rem" id="feed-${index}"><i class="fas fa-apple-alt p-1"></i>Feed</button>
         <button type="button" class="btn btn-warning mt-1 m-1 p-3" style="width:7rem" id="pet-${index}"><i class="fas fa-heart p-1"></i>Pet</button>
         <button type="button" class="btn btn-warning mt-1 m-1 p-3" style="width:7rem" id="adventure-${index}"><i class="fas fa-running p-1"></i>Adventure</button>
-        <button type="button" class="btn btn-warning mt-1 m-1 p-3" style="width:7rem" id="details-${index}"><i class="fas fa-info-circle p-1"></i>Details</button>
+        <button type="button" class="btn btn-warning mt-1 m-1 p-3" style="width:7rem"  data-toggle="modal" data-target="#dino-details-modal" id="details-${index}"><i class="fas fa-info-circle p-1"></i>Details</button>
         </div>
         <div class="card-body d-flex justify-content-center">
         <button type="button" class="btn btn-danger m1" style="width:5rem" id="delete-${index}"><i class="fas fa-trash-alt p-1"></i></button>

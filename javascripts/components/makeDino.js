@@ -3,7 +3,7 @@ import { printDinosaurs } from '../helpers/utils.js';
 
 const makeDino = () => {
 	$("#add-dino").html(` 
-	<div class="modal fade" id="buy-modal" tabindex="-1" role="dialog" aria-labelledby="add-dinosaur" aria-hidden="true">
+	<div class="modal fade" id="dino-modal" tabindex="-1" role="dialog" aria-labelledby="add-dinosaur" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -41,10 +41,9 @@ const makeDino = () => {
 			</div>
 		</div>
 	</div>
-				<button class="btn btn-dark" data-toggle="modal" data-target="#buy-modal" id="">Add Dinosaur</button>
+				<button class="btn btn-dark" data-toggle="modal" data-target="#dino-modal" id="">Add Dinosaur</button>
 		</div>`)
 
-		//create New dino and then build Kennel
 		$('#submit').click(() => {
 			let dino = {};
 			let dinosaurs = dinoData.getDinosaurs();
@@ -63,10 +62,10 @@ const makeDino = () => {
 					type: `${type}`,
 					age: `${age}`,
 					health: 100,
-					isDead: false 
+					isDead: false,
+					adventures: []
 				};
 
-				
 				$("#add-dino").html("");
 				$(".modal-backdrop").remove();
 				$("#add-dinosaur").modal("hide");
