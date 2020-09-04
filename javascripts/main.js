@@ -1,10 +1,10 @@
-import kennel from './components/kennel.js';
-import {makeDino} from './components/makeDino.js'
+import data from './helpers/data/data.js';
+import { makeDino } from './components/makeDino.js';
+import { printDinosaurs } from './helpers/utils.js';
 
 const init = () => {
-kennel.buildKennel();
-makeDino()
-
+makeDino();
+printDinosaurs(data.getDinosaurs());
 };
 
 init();

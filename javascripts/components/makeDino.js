@@ -1,5 +1,5 @@
-import kennel from './kennel.js';
-import dinoData from '../helpers/data/dinoData.js'
+import dinoData from '../helpers/data/data.js'
+import { printDinosaurs } from '../helpers/utils.js';
 
 const makeDino = () => {
 	$("#add-dino").html(` 
@@ -46,8 +46,9 @@ const makeDino = () => {
 
 		//create New dino and then build Kennel
 		$('#submit').click(() => {
-			console.log("dino clicked")
 			let dino = {};
+			let dinosaurs = dinoData.getDinosaurs();
+
 			if ($(".form-control").val() !== '') {
 				let name = $('#name').val();
 				let image = $('#image').val();
@@ -65,10 +66,12 @@ const makeDino = () => {
 					isDead: false 
 				};
 
+				
 				$("#add-dino").html("");
 				$(".modal-backdrop").remove();
 				$("#add-dinosaur").modal("hide");
-				kennel.buildKennel(dino)
+				dinosaurs.push(dino);
+				printDinosaurs(dinosaurs);
 			} else {
 				$("#add-dino").html(alert("Please enter all fields"))
 			}
