@@ -39,7 +39,7 @@ const detailsForDinosaur = (index, item) => {
 
 const takeAnAdventure = (index, item, array) => {
   $(`#adventure-${index}`).click(() => {
-    dinoAdventure(index, item, array)
+    dinoAdventure(item, array)
   });
 };
 

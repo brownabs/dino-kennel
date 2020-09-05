@@ -33,31 +33,31 @@ const dinosaurs = [
 
   const adventures = [
     { id: 'adventure1',
-      title: 'Fighting',
-      healthHit: 40
+      type: 'Fighting',
+      healthDeduction: 40
     },
     { id: 'adventure2',
-    title: 'Hiking',
+    type: 'Hiking',
     healthDeduction: 15
   },
   { id: 'adventure3',
-  title: 'Running',
+  type: 'Running',
   healthDeduction: 30
   },
   { id: 'adventure4',
-  title: 'Playing',
+  type: 'Playing',
   healthDeduction: 20
   },
   { id: 'adventure5',
-  title: 'Getting lost',
+  type: 'Getting lost',
   healthDeduction: 50
   },
   { id: 'adventure6',
-  title: 'Singing',
+  type: 'Singing',
   healthDeduction: 10
   },
   { id: 'adventure7',
-  title: 'Swimming',
+  type: 'Swimming',
   healthDeduction: 50
   },
   ];
