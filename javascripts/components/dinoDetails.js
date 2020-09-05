@@ -1,6 +1,8 @@
+import { adventureDisplay } from './dinoAdventure.js'
+
 const dinoDetails = (index, item) => {
-console.log(index, item)
-$("#dino-details").html(`
+
+  $("#dino-details").html(`
 <div class="modal fade" id="dino-details-modal" tabindex="-1" role="dialog" aria-labelledby="dino-details" aria-hidden="true">
 <div class="modal-dialog" role="document">
   <div class="modal-content">
@@ -17,7 +19,7 @@ $("#dino-details").html(`
       </table>
     </div>
     <div class="modal-body">
-    <div id="" class="d-flex flex-row justify-content-between">
+    <div id="" class="d-flex flex-column justify-content-between">
         <div id="">
             <img src="${item.image}" class="img-fluid w-75 m-1"  alt="${item.name}">
         </div>
@@ -27,16 +29,15 @@ $("#dino-details").html(`
             <h5>Age: ${item.age}</h5>
             <h5>Owner: ${item.owner}</h5>
         </div>
-        <div class="table">
+        <div class="d-flex flex-column" id="adventures">
         <h2>Adventures</h2>
         </div>
-
-    <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-    </div>
   </div>
 </div>
 </div>`)
-  };
+
+adventureDisplay(item)
+
+};
 
 export { dinoDetails }
